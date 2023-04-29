@@ -1,0 +1,134 @@
+/*------------Informacion donde se encuentra el usuario--------------------*/
+.parrafo-panel{
+    color: rgba(4, 4, 4, 0.8);
+    height: 13vh;
+    padding-left: 3%;
+
+    display: flex;
+    align-items: center;
+}
+/*-------------------------------------------------------------------------*/
+
+/*----------Información principal------------------------------*/
+.main-content-usuario{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 3%;
+    padding: 3%;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo-ayuda{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo-ayuda-h2{
+    flex-shrink: 0;
+}
+.titulo-ayuda-button{
+    background-color: #fff;
+    border: none;
+    flex-shrink: 0;
+}
+/*-------------------------------------------------------------*/
+
+/*-----------Boton añadir----------------------*/
+.boton-agregar-button{
+    background-color: #365280;
+    color: #fff;
+
+    width: 213px;
+    height: 39px;
+
+    border-radius: 10px;
+    border: none;
+
+    padding: 0 3%;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+/*----------------------------------------------*/
+
+/*++++++++++++++++Tabla con datos++++++++++++++++++*/
+.table-content{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 10px;
+}
+.table-content-tr{
+    height: 74px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+td, th{
+    padding: 0 2%;
+}
+
+/*Encabezado de la tabla*/
+.table-encabezado{
+    background-color: #8891A7;
+    text-align: left;
+}
+
+.columna-nro{
+    width: 70px;
+    text-align: center;
+}
+/*------------------------*/
+
+/*Botones de editar y eliminar*/
+.botones-edit-eliminar{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    margin-top: 12px;
+}
+.botones-edit-eliminar-button{
+    border: none;
+    background-color: inherit;
+}
+/*------------------------*/
+
+/*Cuerpo de la tabla*/
+.table-cuerpo-nro{
+    text-align: center;
+}
+.table-cuerpo tr:nth-child(odd) {
+    background-color: #fff;
+}
+.table-cuerpo tr:nth-child(even) {
+    background-color: #EFEFEF;
+}
+
+.table-cuerpo-telefono{
+    width: 15%;
+}
+.table-cuerpo-usuario{
+    width: 20%;
+}
+.table-cuerpo-nomApe{
+    width: 30%;
+}
+.table-cuerpo-estado{
+    width: 15%;
+    text-align: center;
+}
+.table-cuerpo-estado p{
+    background-color: #2C822B;
+    color: #fff;
+    border-radius: 20px;
+    height: 30px;
+    padding-top: 5px;
+}
+/*------------------------*/
+/*++++++++++++++++++++++++++++++++++++++++++++*/
