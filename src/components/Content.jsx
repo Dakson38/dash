@@ -4,6 +4,7 @@ import './styles/content.css'
 import imgUser from '../assets/icons/user.png'
 import ContentCursoEvento from './ContentCursoEvento'
 import ContentUsuario from './ContentUsuario'
+import ContentNormativa from './ContentNormativa'
 
 function Content ({ubicacionDash, iconoDash, data})  {
   return (
@@ -20,6 +21,7 @@ function Content ({ubicacionDash, iconoDash, data})  {
       </p>
       {ubicacionDash === 'Cursos' || ubicacionDash === 'Eventos'? <ContentCursoEvento ubicacionDash={ubicacionDash} iconoDash={iconoDash} data={data}></ContentCursoEvento> : '' }
       {ubicacionDash === 'Usuarios' ?  <ContentUsuario ubicacionDash={ubicacionDash} iconoDash={iconoDash} data={data}></ContentUsuario> :''}
+      {ubicacionDash === 'Normativas' ? <ContentNormativa ubicacionDash={ubicacionDash} iconoDash={iconoDash} data={data}></ContentNormativa> : ''}
     </div>
   )
 }

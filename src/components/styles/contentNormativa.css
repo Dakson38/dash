@@ -1,0 +1,47 @@
+.titulo-ayuda-h2{
+    width: 60%;
+}
+
+/*-------------Contenedor de Normativa--------*/
+.main-content-normativa{
+    margin: 0 3%;
+    display: flex;
+    gap: 30px;
+}
+/*---------------------------------------------*/
+
+/*----Grupo de Normativas----------*/
+.content-normativa{
+    width: 45%;
+
+    padding: 3%;
+    border-radius: 10px;
+
+    background-color: #fff;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.table-normativa-titulo{
+    width: 50%;
+}
+/*---------------------------------------------*/
+
+/*--------Contenido del grupo normativa*/
+.content-normativa-derivado{
+    width: 55%;
+
+    padding: 3%;
+    border-radius: 10px;
+
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.table-normativa-derivado-titulo{
+    width: 45%;
+}
+/*---------------------------------------------*/
