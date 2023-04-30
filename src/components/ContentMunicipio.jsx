@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './styles/contentMunicipio.css'
 
 import iconAyuda from '../assets/icons/help.svg'
@@ -9,21 +9,23 @@ import iconEditAlcalde from '../assets/icons/editalcalde.svg'
 
 import imgAlcalde from '../assets/images/alcalde.jpg'
 import Help from './Ayuda/Help'
+import Formulario from './Formulario/Formulario'
 
 function ContentMunicipio({ ubicacionDash, iconoDash, data }) {
     const [estadoModal, cambiarEstadoModal] = useState(false);
+    const [estadoForm, cambiarEstadoForm] = useState(false);
     return (
         <div className='main-content-municipio'>
             <div className='titulo-ayuda'>
                 <h2 className='titulo-ayuda-h2'>{ubicacionDash}</h2>
-                
-                <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img'/></button>
-                <Help 
-                titulo={ubicacionDash} 
-                mostrarImagen={true} 
-                estado={estadoModal} 
-                cambiarEstado={cambiarEstadoModal}/>
-                
+
+                <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
+                <Help
+                    titulo={ubicacionDash}
+                    mostrarImagen={true}
+                    estado={estadoModal}
+                    cambiarEstado={cambiarEstadoModal} />
+
             </div>
 
             <div className='lista-regiones'>
@@ -108,6 +110,7 @@ function TablaMunicipios() {
 }
 
 function DataAlcalde() {
+    const [estadoForm, cambiarEstadoForm] = useState(false);
     return (
         <div className='data-alcalde'>
             <div className='alcalde-foto-edit'>
@@ -115,7 +118,13 @@ function DataAlcalde() {
                     <img src={imgAlcalde} alt="" />
                 </div>
                 <div>
-                    <button className='icono-edit-alcalde'><img src={iconEditAlcalde} alt="" /></button>
+                    <button className='icono-edit-alcalde' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconEditAlcalde} alt="" /></button>
+                    <Formulario
+                        titulo={'Alcalde'}
+                        mostrarAlcalde={true}
+                        estado={estadoForm}
+                        cambiarEstado={cambiarEstadoForm}
+                    />
                 </div>
             </div>
             <table className='tabla-alcalde'>

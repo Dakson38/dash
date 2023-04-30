@@ -5,10 +5,12 @@ import iconEliminar from '../assets/icons/eliminar.svg'
 
 import './styles/contentCursoEvento.css'
 import Help from './Ayuda/Help'
+import Formulario from './Formulario/Formulario'
 
 
 function ContentCursoEvento ({ubicacionDash, iconoDash, data}) {
     const [estadoModal, cambiarEstadoModal] = useState(false);
+    const [estadoForm, cambiarEstadoForm] = useState(false);
 
     let colum;
     if (ubicacionDash == 'Cursos') {
@@ -31,7 +33,13 @@ function ContentCursoEvento ({ubicacionDash, iconoDash, data}) {
 
     </div>
     <div>
-        <button className='boton-agregar-button'><img src={iconoDash} alt="" />Añadir {ubicacionDash}</button>
+        <button className='boton-agregar-button' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconoDash} alt="" />Añadir {ubicacionDash}</button>
+        <Formulario
+        titulo={ubicacionDash}
+        mostrarCurso={true}
+        estado={estadoForm}
+        cambiarEstado={cambiarEstadoForm}
+        />
     </div>
     <table className='table-content'>
         <thead className='table-encabezado'>
