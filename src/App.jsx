@@ -166,7 +166,7 @@ function App() {
         <Route path='/cursos' element={<Content ubicacionDash={'Cursos'} iconoDash={iconoCurso} data={informacion}></Content>} />
         <Route path='/eventos' element={<Content ubicacionDash={'Eventos'} iconoDash={iconoEvento} data={informacion}></Content>} />
         <Route path='/normativas' element={<Content ubicacionDash={'Normativas'} iconoDash={iconoNormativa} data={infoNorma}></Content>} />
-        <Route path='/municipios' element={<div></div>} />
+        <Route path='/municipios' element={<Content ubicacionDash={'Municipios'} iconoDash={iconoMunicipio} data={informacion}></Content>} />
         <Route path='/usuarios' element={<Content ubicacionDash={'Usuarios'} iconoDash={iconoUsuario} data={infoUsu}></Content>} />
         <Route path='/salir' element={<div></div>} />
       </Routes>

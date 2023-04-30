@@ -28,7 +28,7 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
               <td></td>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='table-cuerpo'>
 
                   <tr >
                     <td className='table-cuerpo-nro'>1</td>
@@ -102,7 +102,7 @@ export function ContentNormativaDerivado({dataNormativa, iconoDash}) {
             <td></td>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='table-cuerpo'>
 
                 <tr>
                   <td className='table-cuerpo-nro'>1</td>
