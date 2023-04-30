@@ -69,6 +69,7 @@
 }
 .table-td{
     padding: 0 2%;
+    width: 40%;
 }
 
 /*Encabezado de la tabla*/
@@ -85,17 +86,20 @@
 
 /*Botones de editar y eliminar*/
 .botones-edit-eliminar{
-    width: 130px;
+    height: inherit;
+
+    padding-right: 5%;
+
     display: flex;
-    gap: 10px;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    margin-top: 12px;
     
 }
 .botones-edit-eliminar-button{
+    margin: 0;
+    height: fit-content;
     border: none;
-    background-color: inherit;
 }
 /*------------------------*/
 

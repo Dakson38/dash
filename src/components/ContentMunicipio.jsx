@@ -41,51 +41,58 @@ function ContentMunicipio({ ubicacionDash, iconoDash, data }) {
 export default ContentMunicipio
 
 function TablaMunicipios() {
+
+    const listaMunicipios = [
+        {
+            nro: 1,
+            municipio: 'Mecapaca'
+        },
+        {
+            nro: 2,
+            municipio: 'La Paz'
+        },
+        {
+            nro: 3,
+            municipio: 'El Alto'
+        },
+        {
+            nro: 4,
+            municipio: 'Pucarani'
+        },
+        {
+            nro: 5,
+            municipio: 'Achocalla'
+        },
+        {
+            nro: 6,
+            municipio: 'Laja'
+        },
+        {
+            nro: 7,
+            municipio: 'Palca'
+        }
+    ]
+
     return (
         <table className='table-content-municipio'>
             <thead className='table-encabezado'>
                 <tr>
                     <th className='columna-nro'>N°</th>
-                    <th className='columna-municipio'>Municipios</th>
+                    <th className='columna-municipio'>Municipio</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody className='table-cuerpo'>
-                <tr>
-                    <td className='table-cuerpo-nro'>1</td>
-                    <td className='columna-municipio'>Mecapaca</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
-                <tr>
-                    <td className='table-cuerpo-nro'>2</td>
-                    <td className='columna-municipio'>La Paz</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
-                <tr>
-                    <td className='table-cuerpo-nro'>3</td>
-                    <td className='columna-municipio'>El Alto</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
-                <tr>
-                    <td className='table-cuerpo-nro'>4</td>
-                    <td className='columna-municipio'>Pucarani</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
-                <tr>
-                    <td className='table-cuerpo-nro'>5</td>
-                    <td className='columna-municipio'>Achocalla</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
-                <tr>
-                    <td className='table-cuerpo-nro'>6</td>
-                    <td className='columna-municipio'>Laja</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
-                <tr>
-                    <td className='table-cuerpo-nro'>7</td>
-                    <td className='columna-municipio'>Palca</td>
-                    <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
-                </tr>
+                {
+                    listaMunicipios.map(objMunicipio => (
+                        <tr key={objMunicipio.nro}>
+                            <td className='table-cuerpo-nro'>{objMunicipio.nro}</td>
+                            <td className='columna-municipio'>{objMunicipio.municipio}</td>
+                            <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
+                        </tr>
+                    )
+                    )
+                }
             </tbody>
         </table>
     )
@@ -96,10 +103,10 @@ function DataAlcalde() {
         <div className='data-alcalde'>
             <div className='alcalde-foto-edit'>
                 <div className='img-alcalde'>
-                    <img src={imgAlcalde} alt=""  />
+                    <img src={imgAlcalde} alt="" />
                 </div>
                 <div>
-                    <button className='icono-edit-alcalde'><img src={iconEditAlcalde} alt=""  /></button>
+                    <button className='icono-edit-alcalde'><img src={iconEditAlcalde} alt="" /></button>
                 </div>
             </div>
             <table className='tabla-alcalde'>
@@ -137,29 +144,29 @@ function DocsDescargable() {
         <div className='docs-descargables'>
             <button className='boton-doc-descargable'>
                 <div>
-                    <p>PTDI-PEI</p>
-                    <p>Fuente: Ministerio de Planificacion para el Desarrollo</p>
+                    <p className='parrafos-doc-descargable'>PTDI-PEI</p>
+                    <p className='parrafos-doc-descargable'>Fuente: Ministerio de Planificacion para el Desarrollo</p>
                 </div>
                 <img src={iconCargar} alt="" />
             </button>
             <button className='boton-doc-descargable'>
                 <div>
-                    <p>Ejecución Presupuestaria</p>
-                    <p>Fuente: Ministerio de Economía y Finanzas</p>
+                    <p className='parrafos-doc-descargable'>Ejecución Presupuestaria</p>
+                    <p className='parrafos-doc-descargable'>Fuente: Ministerio de Economía y Finanzas</p>
                 </div>
                 <img src={iconCargar} alt="" />
             </button>
             <button className='boton-doc-descargable'>
                 <div>
-                    <p>POA</p>
-                    <p>Fuente: Ministerio de Economía y Finanzas</p>
+                    <p className='parrafos-doc-descargable'>POA</p>
+                    <p className='parrafos-doc-descargable'>Fuente: Ministerio de Economía y Finanzas</p>
                 </div>
                 <img src={iconCargar} alt="" />
             </button>
             <button className='boton-doc-descargable'>
                 <div>
-                    <p>Datos Estadísticos</p>
-                    <p>Fuente: Instituto Nacional de Estadística</p>
+                    <p className='parrafos-doc-descargable'>Datos Estadísticos</p>
+                    <p className='parrafos-doc-descargable'>Fuente: Instituto Nacional de Estadística</p>
                 </div>
                 <img src={iconCargar} alt="" />
             </button>

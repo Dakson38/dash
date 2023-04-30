@@ -4,6 +4,7 @@ import iconAyuda from '../assets/icons/help.svg'
 import iconEditar from '../assets/icons/editar.svg'
 import iconEliminar from '../assets/icons/eliminar.svg'
 
+import Help from './Ayuda/Help'
 
 function ContentUsuario ({ubicacionDash, iconoDash, data}) {
   return (

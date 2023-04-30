@@ -9,7 +9,31 @@ import './styles/contentNormativa.css'
 
 
 function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
-  
+
+  const listaGrupos = [
+    {
+      nro: 1,
+      titulo: 'Marco normativo general de autonomìa'
+    },
+    {
+      nro: 2,
+      titulo: 'Estatutos departamentales'
+    },
+    {
+      nro: 3,
+      titulo: 'Cartas Orgánicas  Municipales'
+    },
+    {
+      nro: 4,
+      titulo: 'Estatutos Autonómicos Indígena Originario Campesino'
+    },
+    {
+      nro: 5,
+      titulo: 'Estatuto Autonomico Regional'
+    },
+    
+  ]
+
   return (
     <div className='main-content-normativa'>
       <div className='content-normativa'>
@@ -29,48 +53,18 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
             </tr>
           </thead>
           <tbody className='table-cuerpo'>
-
-                  <tr >
-                    <td className='table-cuerpo-nro'>1</td>
-                    <td>Marco normativo general de autonomìa</td>
-                    <td className='botones-edit-eliminar'>
-                      <button className='botones-edit-eliminar-button'><img src={iconVer} alt="" /></button>
-                      <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                    </td>
-                  </tr>
-                  <tr >
-                    <td className='table-cuerpo-nro'>2</td>
-                    <td>Estatutos departamentales</td>
-                    <td className='botones-edit-eliminar'>
-                      <button className='botones-edit-eliminar-button'><img src={iconVer} alt="" /></button>
-                      <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                    </td>
-                  </tr>
-                  <tr >
-                    <td className='table-cuerpo-nro'>3</td>
-                    <td>Cartas Orgánicas  Municipales</td>
-                    <td className='botones-edit-eliminar'>
-                      <button className='botones-edit-eliminar-button'><img src={iconVer} alt="" /></button>
-                      <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                    </td>
-                  </tr>
-                  <tr >
-                    <td className='table-cuerpo-nro'>4</td>
-                    <td>Estatutos Autonómicos Indígena Originario Campesino</td>
-                    <td className='botones-edit-eliminar'>
-                      <button className='botones-edit-eliminar-button'><img src={iconVer} alt="" /></button>
-                      <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                    </td>
-                  </tr>
-                  <tr >
-                    <td className='table-cuerpo-nro'>5</td>
-                    <td>Estatuto Autonomico Regional</td>
-                    <td className='botones-edit-eliminar'>
-                      <button className='botones-edit-eliminar-button'><img src={iconVer} alt="" /></button>
-                      <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                    </td>
-                  </tr>
-
+            {
+              listaGrupos.map(objGrupo => (
+                <tr key={objGrupo.nro}>
+                  <td className='table-cuerpo-nro'>{objGrupo.nro}</td>
+                  <td>{objGrupo.titulo}</td>
+                  <td className='botones-edit-eliminar'>
+                    <button className='botones-edit-eliminar-button'><img src={iconVer} alt="" /></button>
+                    <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
+                  </td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </div>
@@ -83,7 +77,27 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
 
 export default ContentNormativa
 
-export function ContentNormativaDerivado({dataNormativa, iconoDash}) {
+export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
+
+  const listaGpNormativa = [
+    {
+      nro: 1,
+      subtitle: 'CONSTITUCION POLITICA DEL ESTADO'
+    },
+    {
+      nro: 2,
+      subtitle: 'Ley  N° 482 DE GOBIERNOS AUTÓNOMOS'
+    },
+    {
+      nro: 3,
+      subtitle: 'Ley 018  DEL ÓRGANO ELECTORAL PLURINACIONAL'
+    },
+    {
+      nro: 4,
+      subtitle: 'Ley 073  DE DESLINDE JURISDICCIONAL'
+    },
+  ]
+
   return (
     <div className='content-normativa-derivado'>
       <div className='titulo-ayuda'>
@@ -103,44 +117,19 @@ export function ContentNormativaDerivado({dataNormativa, iconoDash}) {
           </tr>
         </thead>
         <tbody className='table-cuerpo'>
-
-                <tr>
-                  <td className='table-cuerpo-nro'>1</td>
-                  <td className='table-td'>CONSTITUCION POLITICA DEL ESTADO</td>
-                  <td><img src={iconPdf} alt="" /></td>
-                  <td className='botones-edit-eliminar'>
-                    <button className='botones-edit-eliminar-button'><img src={iconEdit} alt="" /></button>
-                    <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='table-cuerpo-nro'>2</td>
-                  <td className='table-td'>Ley  N° 482 DE GOBIERNOS AUTÓNOMOS</td>
-                  <td><img src={iconPdf} alt="" /></td>
-                  <td className='botones-edit-eliminar'>
-                    <button className='botones-edit-eliminar-button'><img src={iconEdit} alt="" /></button>
-                    <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='table-cuerpo-nro'>3</td>
-                  <td className='table-td'>Ley 018  DEL ÓRGANO ELECTORAL PLURINACIONAL</td>
-                  <td><img src={iconPdf} alt="" /></td>
-                  <td className='botones-edit-eliminar'>
-                    <button className='botones-edit-eliminar-button'><img src={iconEdit} alt="" /></button>
-                    <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='table-cuerpo-nro'>4</td>
-                  <td className='table-td'>Ley 073  DE DESLINDE JURISDICCIONAL</td>
-                  <td><img src={iconPdf} alt="" /></td>
-                  <td className='botones-edit-eliminar'>
-                    <button className='botones-edit-eliminar-button'><img src={iconEdit} alt="" /></button>
-                    <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
-                  </td>
-                </tr>
-
+          {
+            listaGpNormativa.map(objGpNormativa => (
+              <tr key={objGpNormativa.nro}>
+                <td className='table-cuerpo-nro'>{objGpNormativa.nro}</td>
+                <td className='table-td'>{objGpNormativa.subtitle}</td>
+                <td><img src={iconPdf} alt="" /></td>
+                <td className='botones-edit-eliminar'>
+                  <button className='botones-edit-eliminar-button'><img src={iconEdit} alt="" /></button>
+                  <button className='botones-edit-eliminar-button'><img src={iconEliminar} alt="" /></button>
+                </td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
     </div>
