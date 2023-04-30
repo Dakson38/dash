@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import iconAyuda from '../assets/icons/help.svg'
 import iconVer from '../assets/icons/ver.svg'
@@ -6,9 +6,11 @@ import iconEliminar from '../assets/icons/eliminar.svg'
 import iconEdit from '../assets/icons/editar.svg'
 import iconPdf from '../assets/icons/pdf.svg'
 import './styles/contentNormativa.css'
+import Help from './Ayuda/Help'
 
 
 function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
+  const [estadoModal, cambiarEstadoModal] = useState(false);
 
   const listaGrupos = [
     {
@@ -31,7 +33,7 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
       nro: 5,
       titulo: 'Estatuto Autonomico Regional'
     },
-    
+
   ]
 
   return (
@@ -39,10 +41,17 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
       <div className='content-normativa'>
         <div className='titulo-ayuda'>
           <h2 className='titulo-ayuda-h2'>{ubicacionDash}</h2>
-          <button className='titulo-ayuda-button'><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
+
+          <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
+          <Help
+            titulo={ubicacionDash}
+            mostrarImagen={true}
+            estado={estadoModal}
+            cambiarEstado={cambiarEstadoModal} />
+
         </div>
         <div>
-          <button className='boton-agregar-button'><img src={iconoDash} alt="" />Añadir {ubicacionDash}</button>
+          <button className='boton-agregar-button'><img src={iconoDash} alt="" />Crear Grupo</button>
         </div>
         <table className='table-content'>
           <thead className='table-encabezado'>
@@ -78,6 +87,7 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
 export default ContentNormativa
 
 export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
+  const [estadoModal, cambiarEstadoModal] = useState(false);
 
   const listaGpNormativa = [
     {
@@ -102,7 +112,14 @@ export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
     <div className='content-normativa-derivado'>
       <div className='titulo-ayuda'>
         <h2 className='titulo-ayuda-h2'>Marco normativo general de autonomía</h2>
-        <button className='titulo-ayuda-button'><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
+
+        <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
+        <Help
+          titulo={"PDF's"}
+          mostrarImagen={false}
+          estado={estadoModal}
+          cambiarEstado={cambiarEstadoModal} />
+
       </div>
       <div>
         <button className='boton-agregar-button'><img src={iconoDash} alt="" />Añadir Documento</button>

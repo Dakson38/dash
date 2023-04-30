@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './styles/contentUsuario.css'
 import iconAyuda from '../assets/icons/help.svg'
 import iconEditar from '../assets/icons/editar.svg'
@@ -7,11 +7,20 @@ import iconEliminar from '../assets/icons/eliminar.svg'
 import Help from './Ayuda/Help'
 
 function ContentUsuario ({ubicacionDash, iconoDash, data}) {
+    const [estadoModal, cambiarEstadoModal] = useState(false);
+
   return (
 <div className='main-content-usuario'>
     <div className='titulo-ayuda'>
         <h2 className='titulo-ayuda-h2'>{ubicacionDash}</h2>
-        <button className='titulo-ayuda-button'><img src={iconAyuda} alt="" className='titulo-ayuda-button-img'/></button>
+        
+        <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img'/></button>
+        <Help 
+        titulo={ubicacionDash} 
+        mostrarImagen={true} 
+        estado={estadoModal} 
+        cambiarEstado={cambiarEstadoModal}/>
+
     </div>
     <div>
         <button className='boton-agregar-button'><img src={iconoDash} alt="" />Añadir Usuario</button>
