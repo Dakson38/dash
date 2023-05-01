@@ -16,6 +16,7 @@
     justify-content: space-between;
 }
 .boton-region{
+    cursor: pointer;
     width: 12%;
     height: 50px;
 
@@ -51,6 +52,7 @@
 
 /*Boton de ver*/
 .columna-ver button{
+    cursor: pointer;
     background-color: #fff;
 
     display: flex;
@@ -100,6 +102,7 @@
     align-self: center;
 }
 .icono-edit-alcalde{
+    cursor: pointer;
     background-color: rgba(147, 169, 204, 0);
     border: none;
 }
@@ -124,6 +127,7 @@
 }
 
 .boton-doc-descargable{
+    cursor: pointer;
     color: #fff;
 
     border: none;
@@ -153,6 +157,7 @@
 }
 
 .boton-doc-vermas{
+    cursor: pointer;
     background-color: rgba(136, 145, 167, 0.75);
     color: #fff;
 

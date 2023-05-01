@@ -31,6 +31,7 @@
     flex-shrink: 0;
 }
 .titulo-ayuda-button{
+    cursor: pointer;
     background-color: #fff;
     border: none;
     flex-shrink: 0;
@@ -39,6 +40,7 @@
 
 /*-----------Boton añadir----------------------*/
 .boton-agregar-button{
+    cursor: pointer;
     background-color: #365280;
     color: #fff;
 
@@ -98,6 +100,7 @@
     
 }
 .botones-edit-eliminar-button{
+    cursor: pointer;
     margin: 0;
     height: fit-content;
     border: none;

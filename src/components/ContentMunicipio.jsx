@@ -99,7 +99,7 @@ function TablaMunicipios() {
                         <tr key={objMunicipio.nro}>
                             <td className='table-cuerpo-nro'>{objMunicipio.nro}</td>
                             <td className='columna-municipio'>{objMunicipio.municipio}</td>
-                            <td className='columna-ver'><button><img src={iconVer} alt="" /></button></td>
+                            <td className='columna-ver'><button className='table-cuerpo-ver-municipio'><img src={iconVer} alt="" /></button></td>
                         </tr>
                     )
                     )

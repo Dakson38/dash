@@ -70,6 +70,7 @@
     height: 43px;
 }
 .form-boton-guardar{
+    cursor: pointer;
     width: 125px;
 
     border: none;
@@ -78,6 +79,7 @@
     color: #fff;
 }
 .form-boton-cancelar{
+    cursor: pointer;
     width: 125px;
 
     border: none;
