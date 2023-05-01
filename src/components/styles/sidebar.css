@@ -29,10 +29,7 @@
     list-style: none;
 }
 .navside-li{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex: 1;    
 }
 .navside-li-img{
     width: 40%;
@@ -42,6 +39,14 @@
 .navside-li-a{
     text-decoration: none;   
     color: rgba(255, 255, 255, 0.6);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
 }
 
 .navside-logout{

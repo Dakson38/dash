@@ -16,30 +16,24 @@ const Sidebar = () => {
         <img src={sedalp} alt="" className='img-sedalp'/>
         <ul className='navside'>
             <li className='navside-li'>
-                <div className='navside-li-img'><img src={iconCursos} alt=""/></div>
-                <NavLink className="navside-li-a" to="/cursos">CURSOS</NavLink>
+                <NavLink className="navside-li-a" to="/cursos"><div className='navside-li-img'><img src={iconCursos} alt=""/></div><p>CURSOS</p></NavLink>
             </li>
             <li className='navside-li'>
-                <div className='navside-li-img'><img src={iconEventos} alt=""/></div>
-                <NavLink className="navside-li-a" to="/eventos">EVENTOS</NavLink>
+                <NavLink className="navside-li-a" to="/eventos"><div className='navside-li-img'><img src={iconEventos} alt=""/></div><p>EVENTOS</p></NavLink>
             </li>
             <li className='navside-li'>
-                <div className='navside-li-img'><img src={iconNormativas} alt=""/></div>
-                <NavLink className="navside-li-a" to="/normativas">NORMATIVAS</NavLink>
+                <NavLink className="navside-li-a" to="/normativas"><div className='navside-li-img'><img src={iconNormativas} alt=""/></div><p>NORMATIVAS</p></NavLink>
             </li>
             <li className='navside-li'>
-                <div className='navside-li-img'><img src={iconMunicipios} alt=""/></div>
-                <NavLink className="navside-li-a" to="/municipios">MUNICIPIOS</NavLink>
+                <NavLink className="navside-li-a" to="/municipios"><div className='navside-li-img'><img src={iconMunicipios} alt=""/></div><p>MUNICIPIOS</p></NavLink>
             </li>
             <li className='navside-li'> 
-                <div className='navside-li-img'><img src={iconUsuarios} alt=""/></div>
-                <NavLink className="navside-li-a" to="/usuarios">USUARIOS</NavLink>
+                <NavLink className="navside-li-a" to="/usuarios"><div className='navside-li-img'><img src={iconUsuarios} alt=""/></div><p>USUARIOS</p></NavLink>
             </li>
         </ul>
             <ul className='navside-logout'>             
                 <li className='navside-li'>
-                    <div className='navside-li-img'><img src={iconSalir} alt=""/></div>
-                    <NavLink className="navside-li-a" to="/salir">SALIR</NavLink>
+                    <NavLink className="navside-li-a" to="/salir"><div className='navside-li-img'><img src={iconSalir} alt=""/></div><p>SALIR</p></NavLink>
                 </li>
             </ul>
     </aside>
