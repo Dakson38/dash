@@ -1,0 +1,47 @@
+.contenedor-form-norm-usu{
+    padding: 3%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+    width: 30vw;
+    
+    height: fit-content;
+    border-radius: 30px;
+
+    color: #fff;
+    background-color: rgba(33, 38, 46, 0.95);
+}
+.form-boton-archivo{
+    cursor: pointer;
+    background-color: #365280;
+    width: 50%;
+    min-height: 40px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.form-total-norm-usuario{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-botones-cancelar-enviar-norm{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+
+    height: 48px;
+    
+}
+.form-archivo-pdf-norm{
+    height: 50px;
+}

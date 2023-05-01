@@ -18,9 +18,9 @@ function Formulario({ titulo, mostrarCurso, mostrarEvento, mostrarAlcalde, estad
                     <form action="" className='form-total'>
                         <div className='form-total-info'>
                             <div className='form-text'>
-                                {titulo === 'Cursos' ? <MostrarCurso /> : ''}
-                                {titulo === 'Eventos' ? <MostrarEvento /> : ''}
-                                {titulo === 'Alcalde' ? <MostrarAlcalde/>: ''}
+                                {titulo === 'Cursos' ? <FormCurso /> : ''}
+                                {titulo === 'Eventos' ? <FormEvento /> : ''}
+                                {titulo === 'Alcalde' ? <FormAlcalde/>: ''}
                             </div>
                             <div className='form-img'>
                                 <label htmlFor="imagen">
@@ -47,7 +47,7 @@ function Formulario({ titulo, mostrarCurso, mostrarEvento, mostrarAlcalde, estad
 export default Formulario
 
 
-function MostrarCurso() {
+function FormCurso() {
     return (
         <>
             <label htmlFor="titulo">Título</label>
@@ -59,7 +59,7 @@ function MostrarCurso() {
     )
 }
 
-function MostrarEvento() {
+function FormEvento() {
     return (
         <>
             <label htmlFor="titulo">Título</label>
@@ -74,7 +74,7 @@ function MostrarEvento() {
     )
 }
 
-function MostrarAlcalde() {
+function FormAlcalde() {
     return (
         <>
             <label htmlFor="titulo">Nombres y Apellidos</label>

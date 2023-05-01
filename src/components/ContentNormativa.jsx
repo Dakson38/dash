@@ -7,10 +7,12 @@ import iconEdit from '../assets/icons/editar.svg'
 import iconPdf from '../assets/icons/pdf.svg'
 import './styles/contentNormativa.css'
 import Help from './Ayuda/Help'
+import FormNormUsuario from './Formulario/FormNormUsuario'
 
 
 function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
   const [estadoModal, cambiarEstadoModal] = useState(false);
+  const [estadoForm, cambiarEstadoForm] = useState(false);
 
   const listaGrupos = [
     {
@@ -51,7 +53,12 @@ function ContentNormativa({ ubicacionDash, iconoDash, dataNormativa }) {
 
         </div>
         <div>
-          <button className='boton-agregar-button'><img src={iconoDash} alt="" />Crear Grupo</button>
+          <button className='boton-agregar-button' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconoDash} alt="" />Crear Grupo</button>
+          <FormNormUsuario
+            titulo={'Grupo'}
+            estado={estadoForm}
+            cambiarEstado={cambiarEstadoForm}
+          />
         </div>
         <table className='table-content'>
           <thead className='table-encabezado'>
@@ -88,6 +95,7 @@ export default ContentNormativa
 
 export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
   const [estadoModal, cambiarEstadoModal] = useState(false);
+  const [estadoForm, cambiarEstadoForm] = useState(false);
 
   const listaGpNormativa = [
     {
@@ -122,7 +130,12 @@ export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
 
       </div>
       <div>
-        <button className='boton-agregar-button'><img src={iconoDash} alt="" />Añadir Documento</button>
+        <button className='boton-agregar-button' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconoDash} alt="" />Nuevo Documento</button>
+        <FormNormUsuario
+            titulo={'Documento'}
+            estado={estadoForm}
+            cambiarEstado={cambiarEstadoForm}
+          />    
       </div>
       <table className='table-content'>
         <thead className='table-encabezado'>
