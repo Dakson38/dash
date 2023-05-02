@@ -13,17 +13,21 @@ function ContentUsuario({ ubicacionDash, iconoDash, data }) {
 
     return (
         <div className='main-content-usuario'>
+
             <div className='titulo-ayuda'>
+                {/*Titulo Usuarios*/}
                 <h2 className='titulo-ayuda-h2'>{ubicacionDash}</h2>
 
+                {/**Boton de ayuda modal sobre como usar esta seccion */}
                 <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
                 <Help
                     titulo={ubicacionDash}
                     mostrarImagen={true}
                     estado={estadoModal}
                     cambiarEstado={cambiarEstadoModal} />
-
             </div>
+
+            {/**Boton para agregar a un nuevo usuario */}
             <div>
                 <button className='boton-agregar-button' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconoDash} alt="" />Añadir Usuario</button>
                 <FormNormUsuario
@@ -32,6 +36,8 @@ function ContentUsuario({ ubicacionDash, iconoDash, data }) {
                     cambiarEstado={cambiarEstadoForm}
                 />
             </div>
+
+            {/**Tabla que contiene a todos los usuarios */}
             <table className='table-content'>
                 <thead className='table-encabezado'>
                     <tr className='table-content-tr'>
@@ -63,6 +69,7 @@ function ContentUsuario({ ubicacionDash, iconoDash, data }) {
                     }
                 </tbody>
             </table>
+            
         </div>
     )
 }

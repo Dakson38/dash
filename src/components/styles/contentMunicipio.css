@@ -35,12 +35,14 @@
 }
 
 /*Los municipios de la region*/
+.contenedor-table-content-municipio{
+    width: 28%;
+    height: 70vh;
+    overflow-y: auto;
+}
 .table-content-municipio{
     border-collapse: collapse;
     border-spacing: 0;
-    border-radius: 10px;
-    width: 28%;
-    max-height: 70vh;
 }
 .columna-municipio{
     width: 50%;

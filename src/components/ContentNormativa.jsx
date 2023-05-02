@@ -118,17 +118,20 @@ export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
 
   return (
     <div className='content-normativa-derivado'>
-      <div className='titulo-ayuda'>
-        <h2 className='titulo-ayuda-h2'>Marco normativo general de autonomía</h2>
 
+      <div className='titulo-ayuda'>
+        {/**Titulo del grupo normativo seleccionado */}
+        <h2 className='titulo-ayuda-h2'>Marco normativo general de autonomía</h2>
+        
+        {/**Boton de ayuda sobre como usar esta seccion */}
         <button className='titulo-ayuda-button' onClick={() => cambiarEstadoModal(!estadoModal)}><img src={iconAyuda} alt="" className='titulo-ayuda-button-img' /></button>
         <Help
           titulo={"PDF's"}
           mostrarImagen={false}
           estado={estadoModal}
           cambiarEstado={cambiarEstadoModal} />
-
       </div>
+      {/**Boton para agregar mas documentos al grupo normativo */}
       <div>
         <button className='boton-agregar-button' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconoDash} alt="" />Nuevo Documento</button>
         <FormNormUsuario
@@ -137,6 +140,8 @@ export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
             cambiarEstado={cambiarEstadoForm}
           />    
       </div>
+
+      {/**Tabla de todos los documentos que tiene el grupo normativo */}
       <table className='table-content'>
         <thead className='table-encabezado'>
           <tr className='table-content-tr'>
@@ -162,6 +167,7 @@ export function ContentNormativaDerivado({ dataNormativa, iconoDash }) {
           }
         </tbody>
       </table>
+      
     </div>
   )
 }

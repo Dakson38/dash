@@ -16,6 +16,7 @@ function ContentMunicipio({ ubicacionDash, iconoDash, data }) {
     const [estadoForm, cambiarEstadoForm] = useState(false);
     return (
         <div className='main-content-municipio'>
+            {/* Titulo Municipios y el icono de ayuda que despliega un modal */}
             <div className='titulo-ayuda'>
                 <h2 className='titulo-ayuda-h2'>{ubicacionDash}</h2>
 
@@ -28,6 +29,7 @@ function ContentMunicipio({ ubicacionDash, iconoDash, data }) {
 
             </div>
 
+            {/*Lista de todas las regiones como la metropolitana... */}
             <div className='lista-regiones'>
                 <button className='boton-region'>Metropolitana</button>
                 <button className='boton-region'>Valles Sur</button>
@@ -37,7 +39,8 @@ function ContentMunicipio({ ubicacionDash, iconoDash, data }) {
                 <button className='boton-region'>Altiplano Norte</button>
                 <button className='boton-region'>Amazónica</button>
             </div>
-
+            
+            {/*Datos correspondientes de la region seleccionada, los municipios, y del municipio su alcalde y docs */}
             <div className='data-region'>
                 <TablaMunicipios></TablaMunicipios>
 
@@ -81,10 +84,31 @@ function TablaMunicipios() {
         {
             nro: 7,
             municipio: 'Palca'
+        },
+        {
+            nro: 8,
+            municipio: 'Palca'
+        },
+        {
+            nro: 9,
+            municipio: 'Palca'
+        },
+        {
+            nro: 10,
+            municipio: 'Palca'
+        },
+        {
+            nro: 11,
+            municipio: 'Palca'
+        },
+        {
+            nro: 12,
+            municipio: 'Palca'
         }
     ]
 
     return (
+        <div className='contenedor-table-content-municipio'>
         <table className='table-content-municipio'>
             <thead className='table-encabezado'>
                 <tr>
@@ -106,6 +130,7 @@ function TablaMunicipios() {
                 }
             </tbody>
         </table>
+        </div>
     )
 }
 
@@ -113,10 +138,13 @@ function DataAlcalde() {
     const [estadoForm, cambiarEstadoForm] = useState(false);
     return (
         <div className='data-alcalde'>
+
             <div className='alcalde-foto-edit'>
+                {/*Imagen del alcalde */}
                 <div className='img-alcalde'>
                     <img src={imgAlcalde} alt="" />
                 </div>
+                {/**Boton para editar la imagen y los datos del alcalde */}
                 <div>
                     <button className='icono-edit-alcalde' onClick={() => cambiarEstadoForm(!estadoForm)}><img src={iconEditAlcalde} alt="" /></button>
                     <Formulario
@@ -126,7 +154,9 @@ function DataAlcalde() {
                         cambiarEstado={cambiarEstadoForm}
                     />
                 </div>
+
             </div>
+            {/**Informacion del alcalde del municipio */}
             <table className='tabla-alcalde'>
                 <tr>
                     <td></td>
